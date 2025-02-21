@@ -1,0 +1,70 @@
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #ffffff;
+    --text-color: #333333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand img {
+    width: 60px;
+    border-radius: 50%;
+}
+.navbar-nav .nav-link {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.navbar-nav .nav-link:hover {
+    color: #003d80;
+}
+
+/* Titles */
+.navbar-text h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.navbar-text h2 {
+    font-size: 1rem;
+    color: #666666;
+}
+
+/* Chatbot Frame */
+.chatbot-frame {
+    width: 85%;
+    height: 600px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 30px auto;
+    display: block;
+}
+
+/* Marquee FAQ */
+.faq-marquee {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Footer */
+.footer-box {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+}
+.footer-box .social-icons a {
+    color: var(--secondary-color);
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+.footer-box .social-icons a:hover {
+    color: #ccc;
+}

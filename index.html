@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="DICT.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICT Chatbot for Public Inquiries</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="DICT.png" alt="DICT Logo">
+            </a>
+            <span class="navbar-text mx-auto text-center">
+                <h1 class="mb-0">DICT Chatbot Public Inquiries</h1>
+                <h2 class="mb-0">Department of Information and Communications Technology</h2>
+            </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#chatbot">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#reportModal">Report</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#feedbackModal">User Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Chatbot Iframe -->
+    <section id="chatbot">
+        <iframe
+            class="chatbot-frame"
+            src="https://www.chatbase.co/chatbot-iframe/EhcgH2SLJmLkWxek7NKaZ"
+        ></iframe>
+    </section>
+
+    <!-- FAQ Section as Marquee -->
+   <!-- FAQ Section as Accordion -->
+<section id="faq" class="container mt-5">
+    <h2 class="text-center mb-4" style="color: var(--primary-color); font-weight: bold;">Frequently Asked Questions (FAQ)</h2>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faqOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    What is the DICT Chatbot?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="faqOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    The DICT Chatbot assists the public with general inquiries related to DICT services and information.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faqTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How can I contact DICT directly?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    You can reach out via email at <a href="mailto:info@dict.gov.ph">info@dict.gov.ph</a>.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faqThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    What services does DICT provide?
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    DICT provides services related to information and communications technology, digital infrastructure, cybersecurity, and more.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer with Social Icons -->
+    <div class="footer-box">
+        <p>Contact us: <a href="mailto:info@dict.gov.ph">info@dict.gov.ph</a></p>
+        <p>&copy; 2025 Department of Information and Communications Technology</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/DICTgovph" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/DICTgovph" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/DICTgovph" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+<!-- Report Modal -->
+<div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reportModalLabel">Report Suspicious Activity or Scam</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <!-- Type of Report -->
+                    <div class="mb-3">
+                        <label for="reportType" class="form-label">Type of Report</label>
+                        <select class="form-select" id="reportType" required>
+                            <option value="" disabled selected>Select Report Type</option>
+                            <option value="link">Suspicious Link</option>
+                            <option value="number">Suspicious Number</option>
+                            <option value="person">Suspicious Person</option>
+                            <option value="scam">Scam</option>
+                        </select>
+                    </div>
+
+                    <!-- Suspicious Link -->
+                    <div class="mb-3" id="linkDetails" style="display: none;">
+                        <label for="suspiciousLink" class="form-label">Suspicious Link (URL)</label>
+                        <input type="url" class="form-control" id="suspiciousLink" placeholder="Enter URL">
+                    </div>
+
+                    <!-- Suspicious Number -->
+                    <div class="mb-3" id="numberDetails" style="display: none;">
+                        <label for="suspiciousNumber" class="form-label">Suspicious Number</label>
+                        <input type="text" class="form-control" id="suspiciousNumber" placeholder="Enter Phone Number">
+                    </div>
+
+                    <!-- Suspicious Person -->
+                    <div class="mb-3" id="personDetails" style="display: none;">
+                        <label for="suspiciousPerson" class="form-label">Suspicious Person</label>
+                        <input type="text" class="form-control" id="suspiciousPerson" placeholder="Enter Name or Description">
+                    </div>
+
+                    <!-- Scam Details -->
+                    <div class="mb-3" id="scamDetails" style="display: none;">
+                        <label for="scamDetailInput" class="form-label">Scam Details</label>
+                        <input type="text" class="form-control" id="scamDetailInput" placeholder="Describe the scam (e.g., phishing, fraud)">
+                    </div>
+
+                    <!-- Optional Image (Visible for All) -->
+                    <div class="mb-3">
+                        <label for="optionalImage" class="form-label">Optional Image (Evidence)</label>
+                        <input class="form-control" type="file" id="optionalImage" accept="image/*">
+                    </div>
+
+                    <!-- Description -->
+                    <div class="mb-3">
+                        <label for="reportDescription" class="form-label">Description</label>
+                        <textarea class="form-control" id="reportDescription" rows="4" placeholder="Provide more details..."></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary">Submit Report</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- User Feedback Modal -->
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="feedbackModalLabel">User Feedback</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <!-- Feedback Type -->
+                    <div class="mb-3">
+                        <label for="feedbackType" class="form-label">Feedback Type</label>
+                        <select class="form-select" id="feedbackType" required>
+                            <option value="" disabled selected>Select Type</option>
+                            <option value="suggestion">Suggestion</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="inquiry">Inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <!-- Feedback Details -->
+                    <div class="mb-3">
+                        <label for="feedbackDetails" class="form-label">Feedback Details</label>
+                        <textarea class="form-control" id="feedbackDetails" rows="4" placeholder="Provide your feedback..." required></textarea>
+                    </div>
+                    <!-- Optional Contact Info -->
+                    <div class="mb-3">
+                        <label for="contactInfo" class="form-label">Contact Information (Optional)</label>
+                        <input type="email" class="form-control" id="contactInfo" placeholder="Enter your email (optional)">
+                    </div>
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
