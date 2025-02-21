@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="DICT.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICT Chatbot</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .chatbot-container {
+            width: 80%;
+            max-width: 900px;
+            height: 500px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chatbot-header {
+            background: #0D47A1;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .chatbot-header img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+
+        .chatbot-header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .chatbot-frame {
+            flex: 1;
+            width: 100%;
+            border: none;
+        }
+
+        @media (max-width: 800px) {
+            .chatbot-container {
+                width: 95%;
+                height: 400px;
+            }
+
+            .chatbot-header h1 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <img src="DICT.png" alt="DICT Logo">
+            <h1>DICT Chatbot</h1>
+        </div>
+        <iframe
+            class="chatbot-frame"
+            src="https://www.chatbase.co/chatbot-iframe/EhcgH2SLJmLkWxek7NKaZ"
+        ></iframe>
+    </div>
+</body>
+</html>
+        
